@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+.nav-link.active p {
+  color: #000;
+  opacity: 1;
+  font-weight: 600;
+}
+
+body.cursor-hover .inner-circle {
+  width: 80px;
+  height: 80px;
+  margin-left: -40px;
+  margin-top: -40px;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    height 0.3s ease-in-out, margin 0.3s ease-in-out;
+}
+
+body.cursor-hover .outer-circle {
+  opacity: 0;
+}
+
+/* //-----------profile-animation----------// */
+
+.outer-profile {
+  animation: animate 5s ease-in-out infinite;
+  transition: all 0.3s ease-in-out;
+}
+
+.inner-profile {
+  animation: animate 5s ease-in-out infinite;
+  transition: all 0.3s ease-in-out;
+}
+
+@keyframes animate {
+  0% {
+    border-radius: 42% 58% 67% 33% / 47% 40% 60% 53%;
+  }
+  50% {
+    border-radius: 58% 42% 33% 67% / 60% 65% 35% 40%;
+  }
+  100% {
+    border-radius: 42% 58% 67% 33% / 47% 40% 60% 53%;
+  }
+}
+
+/* //----------pages-animation----------// */
+
+.page-animation {
+  animation: page-animate 0.7s ease-out forwards;
+  transition: all 0.3s ease-out;
+}
+
+@keyframes page-animate {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+/* -----------------skill-tools-hover--------------- */
+
+.skill-tools:hover span {
+  background-color: #fff;
+  transform: scale(1.2);
+  transition: background-color 0.3s ease, transform 0.8s ease-out;
+  animation: hover-animate 1s ease-in-out infinite;
+}
+
+.skill-tools li:nth-child(1) span {
+  animation-delay: 0s;
+}
+.skill-tools li:nth-child(2) span {
+  animation-delay: 0.2s;
+}
+.skill-tools li:nth-child(3) span {
+  animation-delay: 0.4s;
+}
+.skill-tools li:nth-child(4) span {
+  animation-delay: 0.6s;
+}
+.skill-tools li:nth-child(5) span {
+  animation-delay: 0.8s;
+}
+
+@keyframes hover-animate {
+  0%,
+  100% {
+    transform: scale(0.8);
+    background-color: #fff;
+
+  }
+  50% {
+    transform: scale(1.05);
+    background-color: #000;
+  }
+}
