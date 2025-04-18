@@ -15,10 +15,8 @@ function Contact() {
     try {
       await emailjs.sendForm(service_id, template_id, form.current, public_key);
       alert("Message sent successfully!");
-      form.current.reset();
     } catch (error) {
       alert("Failed to send message. Please try again.");
-      console.error("EmailJS error:", error);
     }
   };
   return (
