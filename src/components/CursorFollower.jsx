@@ -39,7 +39,7 @@ function CursorFollower() {
   }, []);
 
   return (
-    <>
+    <div className="hidden xl:block">
       {/* Cursor */}
       <div
         ref={cursorRef}
@@ -51,7 +51,7 @@ function CursorFollower() {
         ref={followerRef}
         className="outer-circle fixed top-0 left-0 w-[30px] h-[30px] -ml-[15px] -mt-[15px] border-2 border-black rounded-full pointer-events-none z-40 opacity-50 transition-opacity duration-300 ease-in-out"
       ></div>
-    </>
+    </div>
   );
 }
 

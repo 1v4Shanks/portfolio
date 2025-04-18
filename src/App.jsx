@@ -10,7 +10,7 @@ import CursorFollower from "./components/CursorFollower";
 
 function App() {
   return (
-    <div className="w-full h-screen flex bg-[#f8f8f8]">
+    <div className="w-full h-screen flex flex-col xl:flex-row bg-[#f8f8f8]">
       <CursorFollower />
       <Navbar />
       <Sidebar />

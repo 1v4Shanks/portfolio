@@ -1,5 +1,9 @@
 @import "tailwindcss";
-
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
 .nav-link.active p {
   color: #000;
   opacity: 1;
@@ -18,6 +22,40 @@ body.cursor-hover .inner-circle {
 
 body.cursor-hover .outer-circle {
   opacity: 0;
+  overflow-x: hidden;
+}
+
+/* //-----------scrollbar-disable----------// */
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* //-----------Navbar-button----------// */
+
+.move-down {
+  transform: rotate(45deg);
+  transform-origin: left;
+  width: 114%;
+  transition: width 0.1s ease-in-out, transform 0.3s ease-in-out;
+}
+.disappear {
+  transform: translateX(-100%);
+  visibility: hidden;
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
+}
+
+.move-up {
+  transform: rotate(-45deg);
+  transform-origin: left;
+  width: 114%;
+  transition: width 0.1s ease-in-out, transform 0.3s ease-in-out;
 }
 
 /* //-----------profile-animation----------// */
@@ -92,7 +130,6 @@ body.cursor-hover .outer-circle {
   100% {
     transform: scale(0.8);
     background-color: #fff;
-
   }
   50% {
     transform: scale(1.05);
