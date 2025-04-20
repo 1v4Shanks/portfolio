@@ -39,10 +39,13 @@ function Projects() {
                 </li>
                 <li className="relative pl-[1rem]">
                   <span className="absolute top-1/2 -translate-y-1/2 left-[-23.5px] w-[15px] h-[15px] bg-white rounded-full border border-black/50 z-10"></span>
-                  Add to Cart functionality (Firebase integration in progress)
+                  Add to Cart with Firebase real-time sync
                 </li>
                 <li className="relative pl-[1rem]">
-                  {" "}
+                  <span className="absolute top-1/2 -translate-y-1/2 left-[-23.5px] w-[15px] h-[15px] bg-white rounded-full border border-black/50 z-10"></span>
+                  Order tracking with Firebase real-time updates
+                </li>
+                <li className="relative pl-[1rem]">
                   <span className="absolute top-1/2 -translate-y-1/2 left-[-23.5px] w-[15px] h-[15px] bg-white rounded-full border border-black/50 z-10"></span>
                   Protected routes using React Router
                 </li>

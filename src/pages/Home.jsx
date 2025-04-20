@@ -1,17 +1,18 @@
 import React from "react";
-
+import { assets } from "../assets/assets";
 function Home() {
   return (
     <div className="xl:ml-[350px] flex-1 h-screen overflow-y-auto hide-scrollbar">
       <div className="page-animation min-h-[100vh] w-full flex flex-col gap-[8rem]">
-        <div className="h-screen flex flex-col items-center justify-center gap-[2.5rem] xl:flex xl:items-center xl:gap-[6rem] px-[2rem] py-[5rem] sm:px-[3rem] sm:py-[4rem]  xl:px-[9rem] xl:py-[7rem] bg-white">
-          <div className="relative w-[250px] h-[250px] rounded-full shrink-0">
-            <div className="outer-profile absolute w-[250px] h-[250px] rounded-full shrink-0 bg-black opacity-60"></div>
-            <div className="inner-profile absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[230px] h-[230px] rounded-full shrink-0 bg-black"></div>
+        <div className="h-screen flex flex-col xl:flex-row items-center justify-center gap-[2.5rem] xl:flex xl:items-center xl:gap-[6rem] px-[2rem] py-[5rem] sm:px-[3rem] sm:py-[4rem]  xl:px-[9rem] xl:py-[7rem] bg-white">
+          <div className="relative w-[300px] h-[330px] rounded-full shrink-0">
+            <div className="outer-profile absolute w-full h-full rounded-full shrink-0 bg-black opacity-90"></div>
+            <div className="outer-profile absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[310px] h-[340px] rounded-full shrink-0 bg-black opacity-50"></div>
+            <img src={assets.profile} className="inner-profile object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[310px] rounded-full shrink-0 bg-black"/>
           </div>
 
           <div className="flex justify-center flex-col">
-            <h2 className=" text-4xl text-center font-bold mb-[1.5rem] sm:text-6xl">
+            <h2 className=" text-4xl text-center xl:text-start font-bold mb-[1.5rem] sm:text-6xl">
               ROHIT BHOYE
             </h2>
             <p className="text-center text-m text-black md:text-lg xl:text-left opacity-60">
